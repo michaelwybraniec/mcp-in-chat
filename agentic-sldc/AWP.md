@@ -355,7 +355,7 @@ sequenceDiagram
 - [x] 2.1: Create src/api/server.ts with Express server setup, CORS, JSON middleware
 - [x] 2.2: (MOCK) Create src/api/middleware/auth.ts with mock API key validation (check for "demo-key" header)
 - [x] 2.3: Create src/api/middleware/validation.ts with input validation using express-validator
-- [ ] 2.4: Create src/api/middleware/rate-limit.ts with rate limiting (100 requests per hour per IP)
+- [x] 2.4: Create src/api/middleware/rate-limit.ts with rate limiting (100 requests per hour per IP)
 - [ ] 2.5: (MOCK) Create src/api/services/customer-service.ts with functions to read/write customer data from JSON
 - [ ] 2.6: (MOCK) Create src/api/services/boiler-service.ts with functions to read boiler catalog and inventory
 - [ ] 2.7: (MOCK) Create src/api/services/payment-service.ts with mock payment processing (always returns success)
