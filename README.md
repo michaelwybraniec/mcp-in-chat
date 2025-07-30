@@ -289,74 +289,90 @@ flowchart TD
     style F fill:#fff3e0
 ```
 
-### 📅 **GitHub Commit Timeline**
+### 📅 **Development Timeline**
 
 ```mermaid
-gantt
-    title Development Timeline - Boiler Maintenance MCP Server
-    dateFormat  YYYY-MM-DD
-    section Phase 1: Foundation
-    Project Setup           :done, setup, 2024-07-30, 45m
-    TypeScript Config      :done, tsconfig, 2024-07-30, 15m
-    Package.json Setup     :done, package, 2024-07-30, 15m
+gitgraph
+    commit id: "Project Setup" tag: "Phase 1"
+    commit id: "TypeScript Config"
+    commit id: "Package.json Setup"
     
-    section Phase 2: Backend API
-    Express Server         :done, express, 2024-07-30, 30m
-    API Routes            :done, routes, 2024-07-30, 30m
-    Middleware Setup      :done, middleware, 2024-07-30, 20m
-    Mock Services         :done, services, 2024-07-30, 10m
+    branch backend
+    checkout backend
+    commit id: "Express Server" tag: "Phase 2"
+    commit id: "API Routes"
+    commit id: "Middleware Setup"
+    commit id: "Mock Services"
     
-    section Phase 3: MCP Server
-    MCP SDK Setup         :done, mcp-sdk, 2024-07-30, 15m
-    Tool Definitions      :done, tools, 2024-07-30, 20m
-    Zod Schemas           :done, schemas, 2024-07-30, 10m
+    checkout main
+    merge backend
+    commit id: "MCP SDK Setup" tag: "Phase 3"
     
-    section Phase 4: Integration
-    Documentation         :done, docs, 2024-07-30, 30m
-    Demo Materials        :done, demo, 2024-07-30, 20m
-    Setup Guides          :done, guides, 2024-07-30, 10m
+    branch mcp-integration
+    checkout mcp-integration
+    commit id: "Tool Definitions"
+    commit id: "Zod Schemas"
+    commit id: "Test Scripts"
     
-    section Unplanned Tasks
-    API Server Fix        :done, fix1, 2024-07-30, 20m
-    Schema Corrections    :done, fix2, 2024-07-30, 20m
-    Cursor Integration    :done, fix3, 2024-07-30, 10m
-    Project Organization  :done, org, 2024-07-30, 10m
+    checkout main
+    merge mcp-integration
+    commit id: "Documentation" tag: "Phase 4"
+    commit id: "Demo Materials"
+    commit id: "Setup Guides"
+    
+    branch unplanned
+    checkout unplanned
+    commit id: "API Server Fix" type: HIGHLIGHT
+    commit id: "Schema Corrections" type: HIGHLIGHT
+    commit id: "Cursor Integration" type: HIGHLIGHT
+    commit id: "Project Organization" type: HIGHLIGHT
+    
+    checkout main
+    merge unplanned
+    commit id: "Final Documentation" tag: "v1.0.0"
 ```
 
-### 🎯 **Commit History Overview**
+### 🎯 **GitHub Commit History**
 
 ```mermaid
-timeline
-    title GitHub Commit History
-    section Phase 1: Foundation
-        Initial Setup : Project structure and configuration
-        TypeScript Config : TypeScript setup and configuration
-        Package.json Setup : Dependencies and scripts
+gitgraph
+    commit id: "Initial Setup"
+    commit id: "TypeScript Config"
+    commit id: "Package.json Setup"
     
-    section Phase 2: Backend API
-        Express Server : Basic Express.js server setup
-        API Routes : 4 RESTful endpoints implementation
-        Middleware Setup : Authentication, validation, rate limiting
-        Mock Services : 8 business logic services
-        JSON Data Files : Mock database with realistic data
+    branch develop
+    checkout develop
+    commit id: "Express Server"
+    commit id: "API Routes"
+    commit id: "Middleware Setup"
+    commit id: "Mock Services"
     
-    section Phase 3: MCP Server
-        MCP SDK Setup : Model Context Protocol integration
-        Tool Definitions : 4 MCP tools implementation
-        Zod Schemas : Input/output validation schemas
-        Test Scripts : Comprehensive testing suite
+    checkout main
+    merge develop
+    commit id: "MCP SDK Setup"
     
-    section Phase 4: Integration
-        Documentation : Complete documentation suite
-        Demo Materials : Conversation flows and examples
-        Setup Guides : Installation and configuration guides
+    branch mcp-tools
+    checkout mcp-tools
+    commit id: "Tool Definitions"
+    commit id: "Zod Schemas"
+    commit id: "Test Scripts"
     
-    section Unplanned Tasks
-        API Server Fix : Resolved path-to-regexp error
-        Schema Corrections : Fixed input/output mismatches
-        Cursor Integration : Fixed MCP protocol issues
-        Project Organization : Organized test/ and scripts/ folders
-        Final Documentation : AWP methodology documentation
+    checkout main
+    merge mcp-tools
+    commit id: "Documentation"
+    commit id: "Demo Materials"
+    
+    branch fixes
+    checkout fixes
+    commit id: "API Server Fix" type: HIGHLIGHT
+    commit id: "Schema Corrections" type: HIGHLIGHT
+    commit id: "Cursor Integration" type: HIGHLIGHT
+    
+    checkout main
+    merge fixes
+    commit id: "Project Organization"
+    commit id: "Final Documentation" tag: "v1.0.0"
+    commit id: "Remove node_modules" type: REVERSE
 ```
 
 ### 🛡️ **Security & Validation**
