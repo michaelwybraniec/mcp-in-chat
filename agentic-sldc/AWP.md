@@ -366,11 +366,11 @@ sequenceDiagram
 - [x] 2.12: (MOCK) Create src/api/services/technician-service.ts with mock technician availability and scheduling
 - [x] 2.13: Create src/api/routes/boiler-info.ts with GET /api/boiler-info endpoint (returns customer boiler details + warranty info)
 - [x] 2.14: Create src/api/routes/maintenance.ts with GET /api/maintenance (get schedule) and POST /api/maintenance (schedule service with weather + AI predictions)
-- [ ] 2.15: Create src/api/routes/purchase.ts with POST /api/purchase endpoint (process order with inventory check + technician scheduling)
-- [ ] 2.16: Create src/api/routes/email.ts with POST /api/send-email endpoint (send confirmation emails)
-- [ ] 2.17: Register all routes in server.ts with proper middleware chain (auth -> validation -> rate-limit -> route)
+- [x] 2.15: Create src/api/routes/purchase.ts with POST /api/purchase endpoint (process order with inventory check + technician scheduling)
+- [x] 2.16: Create src/api/routes/email.ts with POST /api/send-email endpoint (send confirmation emails)
+- [x] 2.17: Register all routes in server.ts with proper middleware chain (auth -> validation -> rate-limit -> route)
 - [ ] 2.18: Test all API endpoints with curl or Postman to ensure they return proper JSON responses
-- [ ] 2.19: Create src/api/index.ts to export the Express app for testing
+- [x] 2.19: Create src/api/index.ts to export the Express app for testing
 
 ### 3. MCP Server Development (45 minutes)
 - [ ] 3.1: Create src/mcp/mcp-server.ts with MCP server setup using @modelcontextprotocol/sdk

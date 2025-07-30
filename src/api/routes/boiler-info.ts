@@ -167,7 +167,7 @@ router.get('/:customer_id/warranty',
           boiler_model: customer.boiler_model,
           warranty_status: warrantyStatus,
           available_extensions: extensions,
-          recommendations: this.generateWarrantyRecommendations(warrantyStatus, extensions)
+          recommendations: warrantyStatus ? this.generateWarrantyRecommendations(warrantyStatus, extensions) : []
         },
         timestamp: new Date().toISOString()
       };
@@ -217,7 +217,7 @@ router.get('/:customer_id/efficiency',
 
       // Calculate efficiency metrics
       const currentEfficiency = parseInt(boiler.efficiency.replace('%', ''));
-      const optimalEfficiency = this.getOptimalEfficiency(boiler.model);
+      const optimalEfficiency = boiler ? this.getOptimalEfficiency(boiler.model) : 0;
       const efficiencyGap = optimalEfficiency - currentEfficiency;
       const efficiencyPercentage = Math.round((currentEfficiency / optimalEfficiency) * 100);
 
@@ -230,9 +230,9 @@ router.get('/:customer_id/efficiency',
           optimal_efficiency: `${optimalEfficiency}%`,
           efficiency_gap: `${efficiencyGap}%`,
           efficiency_percentage: `${efficiencyPercentage}%`,
-          efficiency_rating: this.getEfficiencyRating(currentEfficiency),
-          recommendations: this.generateEfficiencyRecommendations(currentEfficiency, optimalEfficiency),
-          potential_savings: this.calculatePotentialSavings(efficiencyGap)
+          efficiency_rating: boiler ? this.getEfficiencyRating(currentEfficiency) : 'Unknown',
+          recommendations: boiler ? this.generateEfficiencyRecommendations(currentEfficiency, optimalEfficiency) : [],
+          potential_savings: boiler ? this.calculatePotentialSavings(efficiencyGap) : 0
         },
         timestamp: new Date().toISOString()
       };

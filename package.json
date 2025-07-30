@@ -2,6 +2,13 @@
   "name": "mcp-in-chat",
   "version": "1.0.0",
   "type": "module",
+  "scripts": {
+    "start:api": "node --loader ts-node/esm src/api/server.ts",
+    "start:mcp": "node --loader ts-node/esm src/mcp/mcp-server.ts",
+    "dev": "ts-node --esm src/api/server.ts",
+    "build": "tsc",
+    "test": "echo \"No tests specified\""
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.17.0",
     "@types/cors": "^2.8.19",
@@ -13,5 +20,8 @@
     "express-rate-limit": "^8.0.1",
     "express-validator": "^7.2.1",
     "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
   }
 }
