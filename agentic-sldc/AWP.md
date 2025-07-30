@@ -358,7 +358,7 @@ sequenceDiagram
 - [x] 2.4: Create src/api/middleware/rate-limit.ts with rate limiting (100 requests per hour per IP)
 - [x] 2.5: (MOCK) Create src/api/services/customer-service.ts with functions to read/write customer data from JSON
 - [x] 2.6: (MOCK) Create src/api/services/boiler-service.ts with functions to read boiler catalog and inventory
-- [ ] 2.7: (MOCK) Create src/api/services/payment-service.ts with mock payment processing (always returns success)
+- [x] 2.7: (MOCK) Create src/api/services/payment-service.ts with mock payment processing (always returns success)
 - [ ] 2.8: (MOCK) Create src/api/services/email-service.ts with mock email sending (logs to console)
 - [ ] 2.9: (MOCK) Create src/api/services/weather-service.ts with mock weather data for maintenance scheduling
 - [ ] 2.10: (MOCK) Create src/api/services/warranty-service.ts with mock warranty information from manufacturers
