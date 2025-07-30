@@ -418,6 +418,12 @@ sequenceDiagram
   - **Priority**: Medium - depends on unplanned task 1.1
   - **Action**: Test external chatbot integration once API server is fixed
 
+- [ ] 1.4: Complete final testing and demo video recording (steps 4.10, 4.12)
+  - **Issue**: Cannot complete final testing or record demo video due to API server startup issue
+  - **Impact**: Cannot demonstrate full integration capabilities
+  - **Priority**: Medium - depends on unplanned task 1.1
+  - **Action**: Complete final testing and record demo video once API server is fixed
+
 ## Procedures
 
 update
@@ -482,9 +488,10 @@ handoff
 - Phase 3 (MCP Server Development) completed successfully
 - All 4 MCP tools created and registered
 - Test script created for tool validation
-- **UNPLANNED TASKS IDENTIFIED**: API server startup issue and MCP testing incomplete
+- Phase 4 (External Integration & Demo) documentation completed
+- **UNPLANNED TASKS IDENTIFIED**: API server startup issue blocking full integration
 - **BLOCKER**: path-to-regexp error preventing API server startup
-- **NEXT**: Address unplanned tasks before proceeding to Phase 4
+- **NEXT**: Address unplanned task 1.1 to enable full integration testing
 
 ## Commit Standard
 
