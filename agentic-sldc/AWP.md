@@ -365,7 +365,7 @@ sequenceDiagram
 - [x] 2.11: (MOCK) Create src/api/services/ai-prediction-service.ts with mock AI predictions for maintenance needs
 - [x] 2.12: (MOCK) Create src/api/services/technician-service.ts with mock technician availability and scheduling
 - [x] 2.13: Create src/api/routes/boiler-info.ts with GET /api/boiler-info endpoint (returns customer boiler details + warranty info)
-- [ ] 2.14: Create src/api/routes/maintenance.ts with GET /api/maintenance (get schedule) and POST /api/maintenance (schedule service with weather + AI predictions)
+- [x] 2.14: Create src/api/routes/maintenance.ts with GET /api/maintenance (get schedule) and POST /api/maintenance (schedule service with weather + AI predictions)
 - [ ] 2.15: Create src/api/routes/purchase.ts with POST /api/purchase endpoint (process order with inventory check + technician scheduling)
 - [ ] 2.16: Create src/api/routes/email.ts with POST /api/send-email endpoint (send confirmation emails)
 - [ ] 2.17: Register all routes in server.ts with proper middleware chain (auth -> validation -> rate-limit -> route)
