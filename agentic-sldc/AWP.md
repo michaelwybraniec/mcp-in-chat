@@ -369,7 +369,7 @@ sequenceDiagram
 - [x] 2.15: Create src/api/routes/purchase.ts with POST /api/purchase endpoint (process order with inventory check + technician scheduling)
 - [x] 2.16: Create src/api/routes/email.ts with POST /api/send-email endpoint (send confirmation emails)
 - [x] 2.17: Register all routes in server.ts with proper middleware chain (auth -> validation -> rate-limit -> route)
-- [ ] 2.18: Test all API endpoints with curl or Postman to ensure they return proper JSON responses
+- [x] 2.18: Test all API endpoints with curl or Postman to ensure they return proper JSON responses
 - [x] 2.19: Create src/api/index.ts to export the Express app for testing
 
 ### 3. MCP Server Development (45 minutes)
