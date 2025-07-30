@@ -392,7 +392,7 @@ sequenceDiagram
 - [ ] 4.5: Test MCP server with Claude by providing server connection details and testing each tool
 - [ ] 4.6: Test MCP server with ChatGPT by providing server connection details and testing each tool
 - [ ] 4.7: Test MCP server with Cursor by providing server connection details and testing each tool
-- [ ] 4.8: Create demo/presentation.md with key points to demonstrate MCP Server integration value
+- [x] 4.8: Create demo/presentation.md with key points to demonstrate MCP Server integration value
 - [ ] 4.9: Create README.md with project overview, setup instructions, and demo guide
 - [ ] 4.10: Record demo video showing MCP Server integration with external chatbot
 - [ ] 4.11: Create troubleshooting.md with common issues and solutions
@@ -411,6 +411,12 @@ sequenceDiagram
   - **Impact**: Cannot confirm MCP server functionality before external integration
   - **Priority**: Medium - depends on unplanned task 1.1
   - **Action**: Test MCP server startup and tool registration once API server is fixed
+
+- [ ] 1.3: Test MCP server with external chatbots (steps 4.5-4.7)
+  - **Issue**: Cannot test MCP server integration with Claude, ChatGPT, or Cursor due to API server startup issue
+  - **Impact**: Cannot demonstrate full integration capabilities
+  - **Priority**: Medium - depends on unplanned task 1.1
+  - **Action**: Test external chatbot integration once API server is fixed
 
 ## Procedures
 
