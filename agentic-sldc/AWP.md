@@ -381,8 +381,8 @@ sequenceDiagram
 - [x] 3.6: Register all 4 MCP tools in mcp-server.ts with proper tool descriptions and parameter schemas
 - [x] 3.7: Create src/mcp/index.ts to export the MCP server for external connections
 - [x] 3.8: Test MCP server locally by starting it and verifying tools are registered correctly
-- [ ] 3.9: Create test script to verify each MCP tool can be called and returns expected responses
-- [ ] 3.10: Create package.json scripts: "start:api" for backend API, "start:mcp" for MCP server
+- [x] 3.9: Create test script to verify each MCP tool can be called and returns expected responses
+- [x] 3.10: Create package.json scripts: "start:api" for backend API, "start:mcp" for MCP server
 
 ### 4. External Integration & Demo (60 minutes)
 - [ ] 4.1: Create docs/setup.md with step-by-step instructions to run the demo
