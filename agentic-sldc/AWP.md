@@ -337,18 +337,18 @@ sequenceDiagram
 ## Project Backlog
 
 ### 1. Project Foundation & Setup (45 minutes)
-- [ ] 1.1: Create package.json with name "mcp-in-chat", version "1.0.0", type "module"
-- [ ] 1.2: Install dependencies: express, @modelcontextprotocol/sdk, typescript, @types/node, @types/express
-- [ ] 1.3: Create tsconfig.json with target ES2022, module ESNext, strict mode enabled
-- [ ] 1.4: Create project folder structure: src/mcp/tools, src/api/routes, src/api/middleware, src/api/services, data
-- [ ] 1.5: (MOCK) Create data/customers.json with sample customer data (name, email, address, boiler model, install date)
-- [ ] 1.6: (MOCK) Create data/boilers.json with boiler catalog (model, manufacturer, efficiency, price, features, warranty_info)
-- [ ] 1.7: (MOCK) Create data/maintenance.json with maintenance schedules (customer_id, last_service, next_service, status, ai_predictions)
-- [ ] 1.8: (MOCK) Create data/inventory.json with available boilers in stock (model, quantity, location, price)
-- [ ] 1.9: (MOCK) Create data/orders.json with purchase orders (customer_id, boiler_model, order_date, status, total)
-- [ ] 1.10: (MOCK) Create data/weather.json with mock weather data for maintenance scheduling
-- [ ] 1.11: (MOCK) Create data/technicians.json with mock technician availability and skills
-- [ ] 1.12: (MOCK) Create data/warranties.json with mock warranty information by manufacturer and model
+- [x] 1.1: Create package.json with name "mcp-in-chat", version "1.0.0", type "module"
+- [x] 1.2: Install dependencies: express, @modelcontextprotocol/sdk, typescript, @types/node, @types/express
+- [x] 1.3: Create tsconfig.json with target ES2022, module ESNext, strict mode enabled
+- [x] 1.4: Create project folder structure: src/mcp/tools, src/api/routes, src/api/middleware, src/api/services, data
+- [x] 1.5: (MOCK) Create data/customers.json with sample customer data (name, email, address, boiler model, install date)
+- [x] 1.6: (MOCK) Create data/boilers.json with boiler catalog (model, manufacturer, efficiency, price, features, warranty_info)
+- [x] 1.7: (MOCK) Create data/maintenance.json with maintenance schedules (customer_id, last_service, next_service, status, ai_predictions)
+- [x] 1.8: (MOCK) Create data/inventory.json with available boilers in stock (model, quantity, location, price)
+- [x] 1.9: (MOCK) Create data/orders.json with purchase orders (customer_id, boiler_model, order_date, status, total)
+- [x] 1.10: (MOCK) Create data/weather.json with mock weather data for maintenance scheduling
+- [x] 1.11: (MOCK) Create data/technicians.json with mock technician availability and skills
+- [x] 1.12: (MOCK) Create data/warranties.json with mock warranty information by manufacturer and model
 - [ ] 1.13: Create src/types/index.ts with TypeScript interfaces for Customer, Boiler, Maintenance, Inventory, Order, Weather, Technician, Warranty
 
 ### 2. Backend API Development (90 minutes)
@@ -437,7 +437,7 @@ next
 
 3.3. Check for blockers before proceeding, and confirm additional plan with human.
 
-3.4. Mark the current step 'check' [ ] as done before you start.
+3.4. Mark the current step 'check' [ ] as done before you start like that [x].
 
 check
 

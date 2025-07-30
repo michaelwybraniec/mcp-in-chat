@@ -1,0 +1,124 @@
+[
+  {
+    "id": "TECH001",
+    "name": "James Wilson",
+    "email": "james.wilson@boilertech.com",
+    "phone": "+44 20 7123 4567",
+    "skills": [
+      "Worcester Bosch",
+      "Vaillant",
+      "Ideal",
+      "Baxi",
+      "Glow-worm"
+    ],
+    "availability": {
+      "monday": ["09:00", "17:00"],
+      "tuesday": ["09:00", "17:00"],
+      "wednesday": ["09:00", "17:00"],
+      "thursday": ["09:00", "17:00"],
+      "friday": ["09:00", "17:00"],
+      "saturday": ["10:00", "16:00"],
+      "sunday": ["emergency_only"]
+    },
+    "location": "London",
+    "experience_years": 8,
+    "rating": 4.8,
+    "specializations": ["Combi boilers", "Smart thermostats"]
+  },
+  {
+    "id": "TECH002",
+    "name": "Sarah Mitchell",
+    "email": "sarah.mitchell@boilertech.com",
+    "phone": "+44 161 234 5678",
+    "skills": [
+      "Worcester Bosch",
+      "Vaillant",
+      "Ideal"
+    ],
+    "availability": {
+      "monday": ["08:00", "16:00"],
+      "tuesday": ["08:00", "16:00"],
+      "wednesday": ["08:00", "16:00"],
+      "thursday": ["08:00", "16:00"],
+      "friday": ["08:00", "16:00"],
+      "saturday": ["09:00", "15:00"],
+      "sunday": ["emergency_only"]
+    },
+    "location": "Manchester",
+    "experience_years": 5,
+    "rating": 4.6,
+    "specializations": ["System boilers", "Heating controls"]
+  },
+  {
+    "id": "TECH003",
+    "name": "Michael Brown",
+    "email": "michael.brown@boilertech.com",
+    "phone": "+44 121 345 6789",
+    "skills": [
+      "Baxi",
+      "Glow-worm",
+      "Worcester Bosch"
+    ],
+    "availability": {
+      "monday": ["10:00", "18:00"],
+      "tuesday": ["10:00", "18:00"],
+      "wednesday": ["10:00", "18:00"],
+      "thursday": ["10:00", "18:00"],
+      "friday": ["10:00", "18:00"],
+      "saturday": ["11:00", "17:00"],
+      "sunday": ["emergency_only"]
+    },
+    "location": "Birmingham",
+    "experience_years": 6,
+    "rating": 4.7,
+    "specializations": ["Regular boilers", "Hot water systems"]
+  },
+  {
+    "id": "TECH004",
+    "name": "Emma Davis",
+    "email": "emma.davis@boilertech.com",
+    "phone": "+44 113 456 7890",
+    "skills": [
+      "Ideal",
+      "Vaillant",
+      "Baxi"
+    ],
+    "availability": {
+      "monday": ["09:00", "17:00"],
+      "tuesday": ["09:00", "17:00"],
+      "wednesday": ["09:00", "17:00"],
+      "thursday": ["09:00", "17:00"],
+      "friday": ["09:00", "17:00"],
+      "saturday": ["10:00", "16:00"],
+      "sunday": ["emergency_only"]
+    },
+    "location": "Leeds",
+    "experience_years": 4,
+    "rating": 4.5,
+    "specializations": ["Combi boilers", "Energy efficiency"]
+  },
+  {
+    "id": "TECH005",
+    "name": "David Thompson",
+    "email": "david.thompson@boilertech.com",
+    "phone": "+44 151 567 8901",
+    "skills": [
+      "Glow-worm",
+      "Worcester Bosch",
+      "Ideal"
+    ],
+    "availability": {
+      "monday": ["08:00", "16:00"],
+      "tuesday": ["08:00", "16:00"],
+      "wednesday": ["08:00", "16:00"],
+      "thursday": ["08:00", "16:00"],
+      "friday": ["08:00", "16:00"],
+      "saturday": ["09:00", "15:00"],
+      "sunday": ["emergency_only"]
+    },
+    "location": "Liverpool",
+    "experience_years": 7,
+    "rating": 4.9,
+    "specializations": ["All boiler types", "Emergency repairs"]
+  }
+] 

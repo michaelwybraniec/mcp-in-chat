@@ -1,0 +1,72 @@
+[
+  {
+    "date": "2024-07-15",
+    "location": "London",
+    "temperature": {
+      "min": 15,
+      "max": 22,
+      "current": 19
+    },
+    "conditions": "partly_cloudy",
+    "precipitation_chance": 20,
+    "wind_speed": 12,
+    "maintenance_suitable": true,
+    "notes": "Good conditions for boiler service"
+  },
+  {
+    "date": "2024-06-10",
+    "location": "Manchester",
+    "temperature": {
+      "min": 12,
+      "max": 18,
+      "current": 15
+    },
+    "conditions": "rainy",
+    "precipitation_chance": 80,
+    "wind_speed": 25,
+    "maintenance_suitable": false,
+    "notes": "Poor weather for outdoor work"
+  },
+  {
+    "date": "2024-08-20",
+    "location": "Birmingham",
+    "temperature": {
+      "min": 18,
+      "max": 25,
+      "current": 22
+    },
+    "conditions": "sunny",
+    "precipitation_chance": 5,
+    "wind_speed": 8,
+    "maintenance_suitable": true,
+    "notes": "Excellent conditions for service"
+  },
+  {
+    "date": "2024-04-05",
+    "location": "Leeds",
+    "temperature": {
+      "min": 8,
+      "max": 14,
+      "current": 11
+    },
+    "conditions": "cloudy",
+    "precipitation_chance": 40,
+    "wind_speed": 15,
+    "maintenance_suitable": true,
+    "notes": "Acceptable conditions, indoor work preferred"
+  },
+  {
+    "date": "2024-09-01",
+    "location": "Liverpool",
+    "temperature": {
+      "min": 16,
+      "max": 21,
+      "current": 18
+    },
+    "conditions": "partly_cloudy",
+    "precipitation_chance": 30,
+    "wind_speed": 10,
+    "maintenance_suitable": true,
+    "notes": "Good conditions for boiler maintenance"
+  }
+] 

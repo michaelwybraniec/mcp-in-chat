@@ -56,16 +56,44 @@ mcp-in-chat/
 ├── src/
 │   ├── mcp/                   # MCP Server (Tool Wrapper)
 │   │   ├── tools/             # MCP tools that call backend API
+│   │   │   ├── boiler-info.ts # Calls GET /api/boiler-info
+│   │   │   ├── maintenance.ts # Calls GET/POST /api/maintenance
+│   │   │   ├── purchase.ts    # Calls POST /api/purchase (includes inventory)
+│   │   │   └── email.ts       # Calls POST /api/send-email
 │   │   └── mcp-server.ts      # Main MCP server entry point
 │   ├── api/                   # Backend API (All Business Logic)
 │   │   ├── routes/            # API endpoints
+│   │   │   ├── boiler-info.ts
+│   │   │   ├── maintenance.ts
+│   │   │   ├── purchase.ts
+│   │   │   └── email.ts
 │   │   ├── middleware/        # Security & validation
+│   │   │   ├── auth.ts        # Authentication
+│   │   │   ├── validation.ts  # Input validation
+│   │   │   └── rate-limit.ts  # Rate limiting
 │   │   ├── services/          # Business logic services
+│   │   │   ├── customer-service.ts
+│   │   │   ├── boiler-service.ts
+│   │   │   ├── payment-service.ts
+│   │   │   ├── email-service.ts
+│   │   │   ├── weather-service.ts
+│   │   │   ├── warranty-service.ts
+│   │   │   ├── ai-prediction-service.ts
+│   │   │   └── technician-service.ts
 │   │   └── server.ts          # Express API server
 │   └── types/                 # TypeScript definitions
 ├── data/                      # Mock Database (JSON files)
+│   ├── customers.json
+│   ├── boilers.json
+│   ├── maintenance.json
+│   ├── inventory.json
+│   ├── orders.json
+│   ├── weather.json
+│   ├── technicians.json
+│   └── warranties.json
 ├── docs/                      # Documentation
 ├── demo/                      # Demo materials
+├── agentic-sldc/              # AWP project planning
 └── README.md
 ```
 
@@ -90,6 +118,7 @@ mcp-in-chat/
 - [MCP Tools](docs/mcp-tools.md) - Tool descriptions and examples
 - [Demo Scenarios](demo/conversation-flows.md) - Sample conversations
 - [Troubleshooting](docs/troubleshooting.md) - Common issues and solutions
+- [AWP Project Plan](agentic-sldc/AWP.md) - Detailed project specification
 
 ## 🎭 Demo Scenarios
 
@@ -118,6 +147,7 @@ All external services are mocked for demonstration:
 - **Weather**: Mock weather data for scheduling
 - **AI Predictions**: Simulated maintenance predictions
 - **Technician Scheduling**: Mock availability and booking
+- **Warranty Information**: Mock warranty data from manufacturers
 
 ## 🎯 Success Criteria
 
@@ -167,4 +197,4 @@ This project is for demonstration purposes only.
 
 ---
 
-**Note**: This is a demonstration project focused on showcasing MCP Server capabilities, not a production-ready system. 
+**Note**: This is a demonstration project focused on showcasing MCP Server capabilities, not a production-ready system.

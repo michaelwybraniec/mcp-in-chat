@@ -1,0 +1,122 @@
+[
+  {
+    "manufacturer": "Worcester Bosch",
+    "model": "8000 Style",
+    "warranty_duration": "10 years",
+    "coverage": "Parts and labour",
+    "conditions": [
+      "Annual service required",
+      "Genuine parts only",
+      "Registered installer installation"
+    ],
+    "extensions": [
+      {
+        "type": "Extended warranty",
+        "duration": "15 years",
+        "cost": 299.99,
+        "conditions": ["Annual service", "Premium membership"]
+      }
+    ],
+    "contact": {
+      "phone": "+44 800 169 9999",
+      "email": "warranty@worcester-bosch.co.uk",
+      "website": "https://www.worcester-bosch.co.uk/warranty"
+    }
+  },
+  {
+    "manufacturer": "Vaillant",
+    "model": "ecoTEC plus",
+    "warranty_duration": "7 years",
+    "coverage": "Parts and labour",
+    "conditions": [
+      "Annual service required",
+      "Genuine parts only",
+      "Registered installer installation"
+    ],
+    "extensions": [
+      {
+        "type": "Extended warranty",
+        "duration": "10 years",
+        "cost": 199.99,
+        "conditions": ["Annual service", "Premium membership"]
+      }
+    ],
+    "contact": {
+      "phone": "+44 800 404 8000",
+      "email": "warranty@vaillant.co.uk",
+      "website": "https://www.vaillant.co.uk/warranty"
+    }
+  },
+  {
+    "manufacturer": "Ideal",
+    "model": "Logic+ Combi",
+    "warranty_duration": "10 years",
+    "coverage": "Parts and labour",
+    "conditions": [
+      "Annual service required",
+      "Genuine parts only",
+      "Registered installer installation"
+    ],
+    "extensions": [
+      {
+        "type": "Extended warranty",
+        "duration": "12 years",
+        "cost": 149.99,
+        "conditions": ["Annual service", "Premium membership"]
+      }
+    ],
+    "contact": {
+      "phone": "+44 800 731 0000",
+      "email": "warranty@idealheating.com",
+      "website": "https://www.idealheating.com/warranty"
+    }
+  },
+  {
+    "manufacturer": "Baxi",
+    "model": "800",
+    "warranty_duration": "8 years",
+    "coverage": "Parts and labour",
+    "conditions": [
+      "Annual service required",
+      "Genuine parts only",
+      "Registered installer installation"
+    ],
+    "extensions": [
+      {
+        "type": "Extended warranty",
+        "duration": "10 years",
+        "cost": 179.99,
+        "conditions": ["Annual service", "Premium membership"]
+      }
+    ],
+    "contact": {
+      "phone": "+44 800 600 0000",
+      "email": "warranty@baxi.co.uk",
+      "website": "https://www.baxi.co.uk/warranty"
+    }
+  },
+  {
+    "manufacturer": "Glow-worm",
+    "model": "Energy",
+    "warranty_duration": "5 years",
+    "coverage": "Parts and labour",
+    "conditions": [
+      "Annual service required",
+      "Genuine parts only",
+      "Registered installer installation"
+    ],
+    "extensions": [
+      {
+        "type": "Extended warranty",
+        "duration": "7 years",
+        "cost": 99.99,
+        "conditions": ["Annual service", "Premium membership"]
+      }
+    ],
+    "contact": {
+      "phone": "+44 800 444 0000",
+      "email": "warranty@glow-worm.co.uk",
+      "website": "https://www.glow-worm.co.uk/warranty"
+    }
+  }
+] 

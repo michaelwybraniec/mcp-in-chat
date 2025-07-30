@@ -1,0 +1,108 @@
+[
+  {
+    "customer_id": "CUST001",
+    "last_service": "2024-01-15",
+    "next_service": "2024-07-15",
+    "status": "scheduled",
+    "ai_predictions": {
+      "next_service_optimal": "2024-07-15",
+      "risk_level": "low",
+      "recommended_actions": ["Annual service", "Filter check"],
+      "efficiency_prediction": "94%"
+    },
+    "service_history": [
+      {
+        "date": "2024-01-15",
+        "type": "annual_service",
+        "technician": "TECH001",
+        "notes": "All systems working correctly"
+      },
+      {
+        "date": "2023-07-15",
+        "type": "annual_service",
+        "technician": "TECH002",
+        "notes": "Minor adjustment to pressure"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST002",
+    "last_service": "2023-12-10",
+    "next_service": "2024-06-10",
+    "status": "overdue",
+    "ai_predictions": {
+      "next_service_optimal": "2024-06-10",
+      "risk_level": "medium",
+      "recommended_actions": ["Urgent service", "Pressure check", "Efficiency test"],
+      "efficiency_prediction": "88%"
+    },
+    "service_history": [
+      {
+        "date": "2023-12-10",
+        "type": "annual_service",
+        "technician": "TECH003",
+        "notes": "Boiler working well, minor efficiency drop noted"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST003",
+    "last_service": "2024-02-20",
+    "next_service": "2024-08-20",
+    "status": "scheduled",
+    "ai_predictions": {
+      "next_service_optimal": "2024-08-20",
+      "risk_level": "low",
+      "recommended_actions": ["Annual service", "Thermostat calibration"],
+      "efficiency_prediction": "93%"
+    },
+    "service_history": [
+      {
+        "date": "2024-02-20",
+        "type": "annual_service",
+        "technician": "TECH001",
+        "notes": "New boiler, excellent performance"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST004",
+    "last_service": "2023-10-05",
+    "next_service": "2024-04-05",
+    "status": "overdue",
+    "ai_predictions": {
+      "next_service_optimal": "2024-04-05",
+      "risk_level": "high",
+      "recommended_actions": ["Emergency service", "Full system check", "Parts replacement likely"],
+      "efficiency_prediction": "82%"
+    },
+    "service_history": [
+      {
+        "date": "2023-10-05",
+        "type": "emergency_service",
+        "technician": "TECH004",
+        "notes": "Replaced faulty pressure sensor"
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST005",
+    "last_service": "2024-03-01",
+    "next_service": "2024-09-01",
+    "status": "scheduled",
+    "ai_predictions": {
+      "next_service_optimal": "2024-09-01",
+      "risk_level": "low",
+      "recommended_actions": ["Annual service", "Filter replacement"],
+      "efficiency_prediction": "90%"
+    },
+    "service_history": [
+      {
+        "date": "2024-03-01",
+        "type": "annual_service",
+        "technician": "TECH002",
+        "notes": "Standard service completed"
+      }
+    ]
+  }
+] 

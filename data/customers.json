@@ -1,0 +1,47 @@
+[
+  {
+    "id": "CUST001",
+    "name": "John Smith",
+    "email": "john.smith@email.com",
+    "address": "123 Main Street, London, SW1A 1AA",
+    "boiler_model": "Worcester Bosch 8000 Style",
+    "install_date": "2022-03-15",
+    "phone": "+44 20 7123 4567"
+  },
+  {
+    "id": "CUST002",
+    "name": "Sarah Johnson",
+    "email": "sarah.johnson@email.com",
+    "address": "456 Oak Avenue, Manchester, M1 1AA",
+    "boiler_model": "Vaillant ecoTEC plus",
+    "install_date": "2021-11-20",
+    "phone": "+44 161 234 5678"
+  },
+  {
+    "id": "CUST003",
+    "name": "Michael Brown",
+    "email": "michael.brown@email.com",
+    "address": "789 Pine Road, Birmingham, B1 1AA",
+    "boiler_model": "Ideal Logic+ Combi",
+    "install_date": "2023-01-10",
+    "phone": "+44 121 345 6789"
+  },
+  {
+    "id": "CUST004",
+    "name": "Emma Wilson",
+    "email": "emma.wilson@email.com",
+    "address": "321 Elm Street, Leeds, LS1 1AA",
+    "boiler_model": "Baxi 800",
+    "install_date": "2022-08-05",
+    "phone": "+44 113 456 7890"
+  },
+  {
+    "id": "CUST005",
+    "name": "David Taylor",
+    "email": "david.taylor@email.com",
+    "address": "654 Maple Drive, Liverpool, L1 1AA",
+    "boiler_model": "Glow-worm Energy",
+    "install_date": "2021-06-12",
+    "phone": "+44 151 567 8901"
+  }
+] 

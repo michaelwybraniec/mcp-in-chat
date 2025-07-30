@@ -1,0 +1,56 @@
+[
+  {
+    "model": "Worcester Bosch 8000 Style",
+    "quantity": 15,
+    "location": "London Warehouse",
+    "price": 2499.99,
+    "status": "in_stock",
+    "arrival_date": "2024-01-15",
+    "supplier": "Worcester Bosch UK"
+  },
+  {
+    "model": "Vaillant ecoTEC plus",
+    "quantity": 8,
+    "location": "Manchester Warehouse",
+    "price": 2199.99,
+    "status": "in_stock",
+    "arrival_date": "2024-02-01",
+    "supplier": "Vaillant UK"
+  },
+  {
+    "model": "Ideal Logic+ Combi",
+    "quantity": 22,
+    "location": "Birmingham Warehouse",
+    "price": 1899.99,
+    "status": "in_stock",
+    "arrival_date": "2024-01-20",
+    "supplier": "Ideal Heating"
+  },
+  {
+    "model": "Baxi 800",
+    "quantity": 12,
+    "location": "Leeds Warehouse",
+    "price": 1799.99,
+    "status": "in_stock",
+    "arrival_date": "2024-02-10",
+    "supplier": "Baxi UK"
+  },
+  {
+    "model": "Glow-worm Energy",
+    "quantity": 5,
+    "location": "Liverpool Warehouse",
+    "price": 1699.99,
+    "status": "low_stock",
+    "arrival_date": "2024-01-25",
+    "supplier": "Glow-worm UK"
+  },
+  {
+    "model": "Worcester Bosch 8000 Style",
+    "quantity": 0,
+    "location": "London Warehouse",
+    "price": 2499.99,
+    "status": "out_of_stock",
+    "arrival_date": "2024-03-15",
+    "supplier": "Worcester Bosch UK"
+  }
+] 

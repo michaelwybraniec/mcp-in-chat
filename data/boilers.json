@@ -1,0 +1,102 @@
+[
+  {
+    "model": "Worcester Bosch 8000 Style",
+    "manufacturer": "Worcester Bosch",
+    "efficiency": "94%",
+    "price": 2499.99,
+    "features": [
+      "Combi boiler",
+      "A-Rated efficiency",
+      "10-year warranty",
+      "Smart thermostat compatible",
+      "Quiet Mark certified"
+    ],
+    "warranty_info": {
+      "duration": "10 years",
+      "coverage": "Parts and labour",
+      "conditions": "Annual service required"
+    },
+    "fuel_type": "Gas",
+    "output": "30kW"
+  },
+  {
+    "model": "Vaillant ecoTEC plus",
+    "manufacturer": "Vaillant",
+    "efficiency": "92%",
+    "price": 2199.99,
+    "features": [
+      "Combi boiler",
+      "A-Rated efficiency",
+      "7-year warranty",
+      "OpenTherm compatible",
+      "Compact design"
+    ],
+    "warranty_info": {
+      "duration": "7 years",
+      "coverage": "Parts and labour",
+      "conditions": "Annual service required"
+    },
+    "fuel_type": "Gas",
+    "output": "25kW"
+  },
+  {
+    "model": "Ideal Logic+ Combi",
+    "manufacturer": "Ideal",
+    "efficiency": "93%",
+    "price": 1899.99,
+    "features": [
+      "Combi boiler",
+      "A-Rated efficiency",
+      "10-year warranty",
+      "Smart controls",
+      "Easy installation"
+    ],
+    "warranty_info": {
+      "duration": "10 years",
+      "coverage": "Parts and labour",
+      "conditions": "Annual service required"
+    },
+    "fuel_type": "Gas",
+    "output": "30kW"
+  },
+  {
+    "model": "Baxi 800",
+    "manufacturer": "Baxi",
+    "efficiency": "91%",
+    "price": 1799.99,
+    "features": [
+      "Combi boiler",
+      "A-Rated efficiency",
+      "8-year warranty",
+      "Compact design",
+      "Easy to use controls"
+    ],
+    "warranty_info": {
+      "duration": "8 years",
+      "coverage": "Parts and labour",
+      "conditions": "Annual service required"
+    },
+    "fuel_type": "Gas",
+    "output": "24kW"
+  },
+  {
+    "model": "Glow-worm Energy",
+    "manufacturer": "Glow-worm",
+    "efficiency": "90%",
+    "price": 1699.99,
+    "features": [
+      "Combi boiler",
+      "A-Rated efficiency",
+      "5-year warranty",
+      "Compact design",
+      "Easy installation"
+    ],
+    "warranty_info": {
+      "duration": "5 years",
+      "coverage": "Parts and labour",
+      "conditions": "Annual service required"
+    },
+    "fuel_type": "Gas",
+    "output": "25kW"
+  }
+] 
