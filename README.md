@@ -50,7 +50,7 @@ Demonstrate MCP Server integration with LLM chatbots by providing 4 focused tool
 
 ### System Overview
 ```mermaid
-graph TB
+flowchart TB
     subgraph "External Chatbots"
         Cursor[Cursor IDE]
         Claude[Claude AI]
@@ -171,7 +171,7 @@ flowchart TD
 
 ### Security & Middleware Architecture
 ```mermaid
-graph LR
+flowchart LR
     subgraph "Request Flow"
         A[External Request] --> B[Rate Limiting]
         B --> C[Authentication]
@@ -274,15 +274,89 @@ graph LR
 ### 🔄 **Tool Integration Flow**
 
 ```mermaid
-graph TD
-    A[User: "Schedule maintenance for CUST001"] --> B[Chatbot selects maintenance tool]
-    B --> C[MCP validates customer_id]
-    C --> D[API processes maintenance request]
-    D --> E[Services coordinate: Weather + Technician + AI]
-    E --> F[Booking confirmed]
-    F --> G[Chatbot suggests email confirmation]
-    G --> H[Email tool sends confirmation]
-    H --> I[User receives complete service]
+flowchart TD
+    A["User: Schedule maintenance for CUST001"] --> B["Chatbot selects maintenance tool"]
+    B --> C["MCP validates customer_id"]
+    C --> D["API processes maintenance request"]
+    D --> E["Services coordinate: Weather + Technician + AI"]
+    E --> F["Booking confirmed"]
+    F --> G["Chatbot suggests email confirmation"]
+    G --> H["Email tool sends confirmation"]
+    H --> I["User receives complete service"]
+    
+    style A fill:#e1f5fe
+    style I fill:#e8f5e8
+    style F fill:#fff3e0
+```
+
+### 📅 **GitHub Commit Timeline**
+
+```mermaid
+gantt
+    title Development Timeline - Boiler Maintenance MCP Server
+    dateFormat  YYYY-MM-DD
+    section Phase 1: Foundation
+    Project Setup           :done, setup, 2024-07-30, 45m
+    TypeScript Config      :done, tsconfig, 2024-07-30, 15m
+    Package.json Setup     :done, package, 2024-07-30, 15m
+    
+    section Phase 2: Backend API
+    Express Server         :done, express, 2024-07-30, 30m
+    API Routes            :done, routes, 2024-07-30, 30m
+    Middleware Setup      :done, middleware, 2024-07-30, 20m
+    Mock Services         :done, services, 2024-07-30, 10m
+    
+    section Phase 3: MCP Server
+    MCP SDK Setup         :done, mcp-sdk, 2024-07-30, 15m
+    Tool Definitions      :done, tools, 2024-07-30, 20m
+    Zod Schemas           :done, schemas, 2024-07-30, 10m
+    
+    section Phase 4: Integration
+    Documentation         :done, docs, 2024-07-30, 30m
+    Demo Materials        :done, demo, 2024-07-30, 20m
+    Setup Guides          :done, guides, 2024-07-30, 10m
+    
+    section Unplanned Tasks
+    API Server Fix        :done, fix1, 2024-07-30, 20m
+    Schema Corrections    :done, fix2, 2024-07-30, 20m
+    Cursor Integration    :done, fix3, 2024-07-30, 10m
+    Project Organization  :done, org, 2024-07-30, 10m
+```
+
+### 🎯 **Commit History Overview**
+
+```mermaid
+timeline
+    title GitHub Commit History
+    section Phase 1: Foundation
+        Initial Setup : Project structure and configuration
+        TypeScript Config : TypeScript setup and configuration
+        Package.json Setup : Dependencies and scripts
+    
+    section Phase 2: Backend API
+        Express Server : Basic Express.js server setup
+        API Routes : 4 RESTful endpoints implementation
+        Middleware Setup : Authentication, validation, rate limiting
+        Mock Services : 8 business logic services
+        JSON Data Files : Mock database with realistic data
+    
+    section Phase 3: MCP Server
+        MCP SDK Setup : Model Context Protocol integration
+        Tool Definitions : 4 MCP tools implementation
+        Zod Schemas : Input/output validation schemas
+        Test Scripts : Comprehensive testing suite
+    
+    section Phase 4: Integration
+        Documentation : Complete documentation suite
+        Demo Materials : Conversation flows and examples
+        Setup Guides : Installation and configuration guides
+    
+    section Unplanned Tasks
+        API Server Fix : Resolved path-to-regexp error
+        Schema Corrections : Fixed input/output mismatches
+        Cursor Integration : Fixed MCP protocol issues
+        Project Organization : Organized test/ and scripts/ folders
+        Final Documentation : AWP methodology documentation
 ```
 
 ### 🛡️ **Security & Validation**
