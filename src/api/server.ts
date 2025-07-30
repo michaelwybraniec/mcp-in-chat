@@ -2,6 +2,12 @@ import express from 'express';
 import cors from 'cors';
 import { config } from 'dotenv';
 
+// Import routes
+import boilerInfoRoutes from './routes/boiler-info.js';
+import maintenanceRoutes from './routes/maintenance.js';
+import purchaseRoutes from './routes/purchase.js';
+import emailRoutes from './routes/email.js';
+
 // Load environment variables
 config();
 
@@ -27,11 +33,11 @@ app.get('/health', (req, res) => {
   });
 });
 
-// API routes will be registered here
-// app.use('/api/boiler-info', boilerInfoRoutes);
-// app.use('/api/maintenance', maintenanceRoutes);
-// app.use('/api/purchase', purchaseRoutes);
-// app.use('/api/email', emailRoutes);
+// API routes
+app.use('/api/boiler-info', boilerInfoRoutes);
+app.use('/api/maintenance', maintenanceRoutes);
+app.use('/api/purchase', purchaseRoutes);
+app.use('/api/email', emailRoutes);
 
 // Error handling middleware
 app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
