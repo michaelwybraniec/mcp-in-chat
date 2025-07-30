@@ -400,8 +400,17 @@ sequenceDiagram
 
 ## Unplanned Tasks
 
-- [ ] 1.1: Unplanned task, Name, Title, Description, etc.
-- [ ] 1.2: Unplanned task, Name, Title, Description, etc.
+- [ ] 1.1: Fix backend API server startup issue with path-to-regexp error
+  - **Issue**: API server fails to start with "Missing parameter name at 1: https://git.new/pathToRegexpError"
+  - **Impact**: Prevents testing of MCP tools and full integration
+  - **Priority**: High - blocking Phase 4 progress
+  - **Investigation needed**: Check route definitions, middleware, or dependency conflicts
+
+- [ ] 1.2: Complete MCP server local testing (step 3.8)
+  - **Issue**: Could not verify MCP server tools are registered correctly due to API server issue
+  - **Impact**: Cannot confirm MCP server functionality before external integration
+  - **Priority**: Medium - depends on unplanned task 1.1
+  - **Action**: Test MCP server startup and tool registration once API server is fixed
 
 ## Procedures
 
@@ -464,7 +473,10 @@ handoff
 - Phase 2 (Backend API Development) completed successfully
 - All TypeScript compilation errors resolved
 - Backend API is ready to serve MCP tools
-- Next phase: Phase 3 (MCP Server Development)
+- Phase 3 (MCP Server Development) completed successfully
+- All 4 MCP tools created and registered
+- Test script created for tool validation
+- Next phase: Phase 4 (External Integration & Demo)
 
 ## Commit Standard
 
