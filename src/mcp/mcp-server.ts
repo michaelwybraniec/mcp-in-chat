@@ -5,11 +5,11 @@ import {
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
 
-// Import MCP tools (will be created in next steps)
-// import { boilerInfoTool } from './tools/boiler-info.js';
-// import { maintenanceTool } from './tools/maintenance.js';
-// import { purchaseTool } from './tools/purchase.js';
-// import { emailTool } from './tools/email.js';
+// Import MCP tools
+import { boilerInfoTool } from './tools/boiler-info.js';
+import { maintenanceTool } from './tools/maintenance.js';
+import { purchaseTool } from './tools/purchase.js';
+import { emailTool } from './tools/email.js';
 
 /**
  * Boiler Maintenance MCP Server
@@ -46,11 +46,11 @@ class BoilerMaintenanceMCPServer {
    * Setup tool handlers for the MCP server
    */
   private setupToolHandlers() {
-    // Tool handlers will be registered here when tools are created
-    // this.registerTool(boilerInfoTool);
-    // this.registerTool(maintenanceTool);
-    // this.registerTool(purchaseTool);
-    // this.registerTool(emailTool);
+    // Register all MCP tools
+    this.registerTool(boilerInfoTool);
+    this.registerTool(maintenanceTool);
+    this.registerTool(purchaseTool);
+    this.registerTool(emailTool);
   }
 
   /**
