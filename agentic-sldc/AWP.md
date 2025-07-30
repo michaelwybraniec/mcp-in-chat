@@ -363,7 +363,7 @@ sequenceDiagram
 - [x] 2.9: (MOCK) Create src/api/services/weather-service.ts with mock weather data for maintenance scheduling
 - [x] 2.10: (MOCK) Create src/api/services/warranty-service.ts with mock warranty information from manufacturers
 - [x] 2.11: (MOCK) Create src/api/services/ai-prediction-service.ts with mock AI predictions for maintenance needs
-- [ ] 2.12: (MOCK) Create src/api/services/technician-service.ts with mock technician availability and scheduling
+- [x] 2.12: (MOCK) Create src/api/services/technician-service.ts with mock technician availability and scheduling
 - [ ] 2.13: Create src/api/routes/boiler-info.ts with GET /api/boiler-info endpoint (returns customer boiler details + warranty info)
 - [ ] 2.14: Create src/api/routes/maintenance.ts with GET /api/maintenance (get schedule) and POST /api/maintenance (schedule service with weather + AI predictions)
 - [ ] 2.15: Create src/api/routes/purchase.ts with POST /api/purchase endpoint (process order with inventory check + technician scheduling)
