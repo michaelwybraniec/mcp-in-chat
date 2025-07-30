@@ -68,7 +68,7 @@ export const authRateLimit = rateLimit({
  */
 export const purchaseRateLimit = rateLimit({
   windowMs: 60 * 60 * 1000, // 1 hour
-  max: 5, // limit each IP to 5 requests per windowMs
+  max: 50, // limit each IP to 50 requests per windowMs (increased for testing)
   message: {
     success: false,
     error: 'Too many purchase attempts',

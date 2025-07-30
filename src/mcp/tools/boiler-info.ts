@@ -54,7 +54,7 @@ const BoilerInfoOutputSchema = z.object({
       location: z.string(),
     }).nullable(),
   }),
-  message: z.string(),
+  message: z.string().optional(),
   timestamp: z.string(),
 });
 

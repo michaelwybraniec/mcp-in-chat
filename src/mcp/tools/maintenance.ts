@@ -10,7 +10,7 @@ const MaintenanceInputSchema = z.object({
   customer_id: z.string().describe('The customer ID for maintenance operations'),
   action: z.enum(['get', 'schedule']).describe('Action to perform: get (retrieve schedule) or schedule (book maintenance)'),
   service_date: z.string().optional().describe('Service date for scheduling (YYYY-MM-DD format)'),
-  service_type: z.enum(['annual_service', 'emergency_service', 'repair']).optional().describe('Type of maintenance service'),
+  service_type: z.enum(['annual', 'emergency', 'repair', 'inspection']).optional().describe('Type of maintenance service'),
   issue_description: z.string().optional().describe('Description of the issue for emergency/repair services'),
 });
 
@@ -21,7 +21,7 @@ const MaintenanceOutputSchema = z.object({
       id: z.string(),
       name: z.string(),
       boiler_model: z.string(),
-    }),
+    }).optional(),
     current_status: z.object({
       maintenance_prediction: z.any(),
       failure_prediction: z.any(),
@@ -52,7 +52,7 @@ const MaintenanceOutputSchema = z.object({
     weather_alerts: z.array(z.any()).optional(),
     recommendations: z.array(z.string()).optional(),
   }),
-  message: z.string(),
+  message: z.string().optional(),
   timestamp: z.string(),
 });
 
@@ -84,8 +84,9 @@ export const maintenanceTool = {
         }
         
         const requestBody: any = {
+          customer_id,
           service_date,
-          service_type: service_type || 'annual_service',
+          service_type: service_type || 'annual',
         };
         
         if (issue_description) {

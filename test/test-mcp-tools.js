@@ -7,10 +7,11 @@
  * It tests the tools directly without requiring the MCP server to be running.
  */
 
-import { boilerInfoTool } from './src/mcp/tools/boiler-info.js';
-import { maintenanceTool } from './src/mcp/tools/maintenance.js';
-import { purchaseTool } from './src/mcp/tools/purchase.js';
-import { emailTool } from './src/mcp/tools/email.js';
+// Use ts-node loader for TypeScript imports
+import { boilerInfoTool } from '../src/mcp/tools/boiler-info.ts';
+import { maintenanceTool } from '../src/mcp/tools/maintenance.ts';
+import { purchaseTool } from '../src/mcp/tools/purchase.ts';
+import { emailTool } from '../src/mcp/tools/email.ts';
 
 const API_BASE_URL = 'http://localhost:3001';
 const API_KEY = 'demo-key';
@@ -113,8 +114,8 @@ async function runTests() {
     { 
       customer_id: TEST_CUSTOMER_ID, 
       action: 'schedule',
-      service_date: '2024-02-15',
-      service_type: 'annual_service'
+      service_date: '2024-07-15',
+      service_type: 'annual'
     },
     ['customer', 'booking', 'technician']
   );
@@ -128,13 +129,14 @@ async function runTests() {
     purchaseTool,
     {
       customer_id: TEST_CUSTOMER_ID,
-      boiler_model: 'EcoMax Pro 30kW',
+      boiler_model: 'Worcester Bosch 8000 Style',
       payment_info: {
         method: 'credit_card',
-        card_number: '1234',
+        card_number: '1234567890123456',
         expiry_date: '12/25',
         cvv: '123',
-        billing_address: '123 Test Street, Test City'
+        billing_address: '123 Test Street, Test City',
+        amount: 2500
       },
       installation_required: true
     },

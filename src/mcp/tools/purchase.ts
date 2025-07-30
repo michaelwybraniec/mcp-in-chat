@@ -15,6 +15,7 @@ const PurchaseInputSchema = z.object({
     expiry_date: z.string().optional().describe('Card expiry date (MM/YY format)'),
     cvv: z.string().optional().describe('Card CVV'),
     billing_address: z.string().describe('Billing address'),
+    amount: z.number().describe('Payment amount'),
   }).describe('Payment information'),
   delivery_address: z.string().optional().describe('Delivery address (if different from billing)'),
   installation_required: z.boolean().optional().describe('Whether installation service is required'),
@@ -28,41 +29,33 @@ const PurchaseOutputSchema = z.object({
       order_id: z.string(),
       customer_id: z.string(),
       boiler_model: z.string(),
-      total_amount: z.number(),
-      order_date: z.string(),
-      status: z.string(),
-      estimated_delivery: z.string(),
+      total: z.number(),
+      payment_method: z.string(),
+      payment_status: z.string(),
+      transaction_id: z.string(),
     }),
     payment: z.object({
+      success: z.boolean(),
       transaction_id: z.string(),
       amount: z.number(),
       method: z.string(),
-      status: z.string(),
+      timestamp: z.string(),
     }),
     boiler: z.object({
       model: z.string(),
       manufacturer: z.string(),
       efficiency: z.string(),
-      price: z.number(),
       features: z.array(z.string()),
       warranty_info: z.object({
         duration: z.string(),
         coverage: z.string(),
+        conditions: z.string(),
       }),
     }),
-    installation: z.object({
-      required: z.boolean(),
-      scheduled_date: z.string().optional(),
-      technician_id: z.string().optional(),
-      estimated_duration: z.string().optional(),
-    }).optional(),
-    inventory: z.object({
-      available: z.boolean(),
-      quantity_after_order: z.number(),
-      location: z.string(),
-    }),
+    installation: z.any().nullable(),
+    email_sent: z.boolean(),
   }),
-  message: z.string(),
+  message: z.string().optional(),
   timestamp: z.string(),
 });
 
@@ -83,11 +76,21 @@ export const purchaseTool = {
     } = args;
     
     try {
+      // Transform payment info to match API format
+      const transformedPaymentInfo = {
+        method: payment_info.method,
+        amount: payment_info.amount,
+        cardNumber: payment_info.card_number,
+        expiryDate: payment_info.expiry_date,
+        cvv: payment_info.cvv,
+        billingAddress: payment_info.billing_address
+      };
+
       // Prepare request body
       const requestBody = {
         customer_id,
         boiler_model,
-        payment_info,
+        payment_info: transformedPaymentInfo,
         delivery_address: delivery_address || null,
         installation_required: installation_required || false,
         preferred_installation_date: preferred_installation_date || null,

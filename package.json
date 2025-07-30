@@ -5,9 +5,19 @@
   "scripts": {
     "start:api": "node --loader ts-node/esm src/api/server.ts",
     "start:mcp": "node --loader ts-node/esm src/mcp/mcp-server.ts",
+    "start:mcp-compiled": "node dist/mcp-server-simple.js",
     "dev": "ts-node --esm src/api/server.ts",
     "build": "tsc",
-    "test": "echo \"No tests specified\""
+    "test": "node --loader ts-node/esm test/test-mcp-tools.js",
+    "test:api": "node test/test-api.js",
+    "test:mcp": "node test/test-mcp-cursor.js",
+    "test:protocol": "node test/test-mcp-protocol.js",
+    "test:compiled": "node test/test-mcp-compiled.js",
+    "test:connection": "node test/test-mcp-connection.js",
+    "test:quick": "node test/quick-mcp-test.js",
+    "status": "./scripts/status-check.sh",
+    "dashboard": "./scripts/logs-dashboard.sh",
+    "monitor": "./scripts/monitor-logs.sh"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.17.0",
