@@ -374,7 +374,7 @@ sequenceDiagram
 
 ### 3. MCP Server Development (45 minutes)
 - [x] 3.1: Create src/mcp/mcp-server.ts with MCP server setup using @modelcontextprotocol/sdk
-- [ ] 3.2: Create src/mcp/tools/boiler-info.ts with MCP tool that calls GET /api/boiler-info with customer_id parameter
+- [x] 3.2: Create src/mcp/tools/boiler-info.ts with MCP tool that calls GET /api/boiler-info with customer_id parameter
 - [ ] 3.3: Create src/mcp/tools/maintenance.ts with MCP tool that calls GET/POST /api/maintenance with customer_id and service_date
 - [ ] 3.4: Create src/mcp/tools/purchase.ts with MCP tool that calls POST /api/purchase with customer_id, boiler_model, payment_info
 - [ ] 3.5: Create src/mcp/tools/email.ts with MCP tool that calls POST /api/send-email with to_email, subject, message
