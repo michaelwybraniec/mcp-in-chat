@@ -349,7 +349,7 @@ sequenceDiagram
 - [x] 1.10: (MOCK) Create data/weather.json with mock weather data for maintenance scheduling
 - [x] 1.11: (MOCK) Create data/technicians.json with mock technician availability and skills
 - [x] 1.12: (MOCK) Create data/warranties.json with mock warranty information by manufacturer and model
-- [ ] 1.13: Create src/types/index.ts with TypeScript interfaces for Customer, Boiler, Maintenance, Inventory, Order, Weather, Technician, Warranty
+- [x] 1.13: Create src/types/index.ts with TypeScript interfaces for Customer, Boiler, Maintenance, Inventory, Order, Weather, Technician, Warranty
 
 ### 2. Backend API Development (90 minutes)
 - [ ] 2.1: Create src/api/server.ts with Express server setup, CORS, JSON middleware
