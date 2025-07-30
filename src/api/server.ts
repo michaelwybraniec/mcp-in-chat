@@ -49,21 +49,19 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
   });
 });
 
-// 404 handler
-app.use('*', (req, res) => {
-  res.status(404).json({
-    success: false,
-    error: 'Endpoint not found',
-    message: `Route ${req.originalUrl} does not exist`
-  });
-});
+// 404 handler - commented out to avoid path-to-regexp issue
+// app.use('*', (req, res) => {
+//   res.status(404).json({
+//     success: false,
+//     error: 'Endpoint not found',
+//     message: `Route ${req.originalUrl} does not exist`
+//   });
+// });
 
 // Start server
-if (process.env.NODE_ENV !== 'test') {
-  app.listen(PORT, () => {
-    console.log(`🚀 Boiler Maintenance API server running on port ${PORT}`);
-    console.log(`📊 Health check: http://localhost:${PORT}/health`);
-  });
-}
+app.listen(PORT, () => {
+  console.log(`🚀 Boiler Maintenance API server running on port ${PORT}`);
+  console.log(`📊 Health check: http://localhost:${PORT}/health`);
+});
 
 export default app; 

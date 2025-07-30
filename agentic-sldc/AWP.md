@@ -400,11 +400,12 @@ sequenceDiagram
 
 ## Unplanned Tasks
 
-- [ ] 1.1: Fix backend API server startup issue with path-to-regexp error
+- [x] 1.1: Fix backend API server startup issue with path-to-regexp error
   - **Issue**: API server fails to start with "Missing parameter name at 1: https://git.new/pathToRegexpError"
   - **Impact**: Prevents testing of MCP tools and full integration
   - **Priority**: High - blocking Phase 4 progress
-  - **Investigation needed**: Check route definitions, middleware, or dependency conflicts
+  - **Root Cause**: 404 handler using `*` wildcard pattern causing path-to-regexp error
+  - **Solution**: Removed problematic 404 handler, all routes now working
 
 - [ ] 1.2: Complete MCP server local testing (step 3.8)
   - **Issue**: Could not verify MCP server tools are registered correctly due to API server issue
