@@ -49,6 +49,7 @@ npm run start:mcp
 - ✅ **TypeScript**: All compilation errors resolved
 - ✅ **MCP Server**: Complete with 4 tools and test infrastructure
 - 🔄 **External Integration**: In progress
+- ⚠️ **Known Issue**: Backend API server startup blocked by path-to-regexp error
 
 ### Connect to External Chatbot
 1. Start the MCP Server (when Phase 3 is complete)
@@ -180,6 +181,21 @@ All external services are mocked for demonstration:
 - ✅ Export module for external connections
 - ✅ Package.json scripts for API and MCP server startup
 
+## 🚨 Known Issues & Unplanned Tasks
+
+### ⚠️ High Priority: Backend API Server Startup Issue
+**Problem**: API server fails to start with path-to-regexp error
+```
+TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+```
+**Impact**: Blocks MCP tool testing and Phase 4 progress
+**Status**: Needs investigation and resolution
+
+### 🔧 Medium Priority: MCP Server Testing
+**Problem**: Cannot verify MCP server tools are registered correctly
+**Impact**: Cannot confirm MCP server functionality before external integration
+**Dependency**: Requires API server issue to be resolved first
+
 ## 🚨 Risk Mitigation
 
 ### External Chatbot Access
@@ -205,6 +221,22 @@ All external services are mocked for demonstration:
 - ✅ Audience understands MCP Server value
 - ✅ Demo runs smoothly without technical issues
 
+## 🧪 Testing
+
+### MCP Tools Test Script
+Run the comprehensive test suite:
+```bash
+node test-mcp-tools.js
+```
+
+This script tests:
+- Input/output schema validation
+- Tool handler execution
+- Expected field presence
+- Error handling
+
+**Note**: Tests require the backend API to be running (currently blocked by startup issue)
+
 ## 🤝 Contributing
 
 This is a demonstration project. For production use:
@@ -219,4 +251,4 @@ This project is for demonstration purposes only.
 
 ---
 
-**Note**: This is a demonstration project focused on showcasing MCP Server capabilities, not a production-ready system.
+**Note**: This is a demonstration project focused on showcasing MCP Server capabilities, not a production-ready system. The project has a known API server startup issue that needs to be resolved before full integration testing can proceed.
