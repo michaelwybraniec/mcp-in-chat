@@ -17,7 +17,7 @@ async function testMCPProtocol() {
   
   const mcpProcess = spawn('node', [
     '--loader', 'ts-node/esm',
-    'src/mcp/mcp-server.ts'
+    '../src/mcp/mcp-server.ts'
   ], {
     cwd: __dirname,
     stdio: ['pipe', 'pipe', 'pipe']

@@ -6,7 +6,7 @@ import { z } from 'zod';
  * Gets customer boiler information and warranty details by calling the backend API
  */
 
-const BoilerInfoInputSchema = z.object({
+export const BoilerInfoInputSchema = z.object({
   customer_id: z.string().describe('The customer ID to get boiler information for'),
 });
 
@@ -61,7 +61,16 @@ const BoilerInfoOutputSchema = z.object({
 export const boilerInfoTool = {
   name: 'boiler-info',
   description: 'Get customer boiler information and warranty details. Use this when a user asks about their boiler status, warranty, or boiler details.',
-  inputSchema: BoilerInfoInputSchema,
+  inputSchema: {
+    type: 'object',
+    properties: {
+      customer_id: {
+        type: 'string',
+        description: 'The customer ID to get boiler information for'
+      }
+    },
+    required: ['customer_id']
+  },
   outputSchema: BoilerInfoOutputSchema,
   
   async handler(args: z.infer<typeof BoilerInfoInputSchema>) {

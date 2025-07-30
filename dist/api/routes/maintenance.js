@@ -87,7 +87,7 @@ router.post('/', authenticateApiKey, generalRateLimit, validateMaintenancePost, 
             });
         }
         // Check weather suitability
-        const location = customer && customer.address ? this.extractLocationFromAddress(customer.address) : 'Unknown';
+        const location = customer && customer.address ? extractLocationFromAddress(customer.address) : 'Unknown';
         const weatherSuitable = await weatherService.isWeatherSuitableForMaintenance(service_date, location);
         if (!weatherSuitable) {
             const weatherRecommendation = await weatherService.getMaintenanceWeatherRecommendation(service_date, location, 7);
@@ -179,7 +179,7 @@ router.get('/:customer_id/schedule', authenticateApiKey, generalRateLimit, async
             aiPredictionService.getPredictiveMaintenanceSchedule(customer_id)
         ]);
         // Get weather data for next 30 days
-        const location = customer && customer.address ? this.extractLocationFromAddress(customer.address) : 'Unknown';
+        const location = customer && customer.address ? extractLocationFromAddress(customer.address) : 'Unknown';
         const optimalDates = await weatherService.getOptimalMaintenanceDates(location, 30);
         const weatherAlerts = await weatherService.getWeatherAlerts(location);
         const response = {
@@ -231,7 +231,7 @@ router.post('/:customer_id/emergency', authenticateApiKey, generalRateLimit, asy
             });
         }
         // Find emergency technicians
-        const location = customer && customer.address ? this.extractLocationFromAddress(customer.address) : 'Unknown';
+        const location = customer && customer.address ? extractLocationFromAddress(customer.address) : 'Unknown';
         const emergencyTechnicians = await technicianService.getEmergencyTechnicians(location);
         if (emergencyTechnicians.length === 0) {
             return res.status(400).json({

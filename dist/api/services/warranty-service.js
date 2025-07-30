@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs';
-import path from 'path';
+import * as path from 'path';
 const WARRANTIES_FILE = path.join(process.cwd(), 'data', 'warranties.json');
 /**
  * Mock Warranty Service for demo purposes
@@ -129,7 +129,7 @@ export class WarrantyService {
     async getManufacturers() {
         try {
             const warranties = await this.getAllWarranties();
-            const manufacturers = [...new Set(warranties.map(w => w.manufacturer))];
+            const manufacturers = Array.from(new Set(warranties.map(w => w.manufacturer)));
             return manufacturers.sort();
         }
         catch (error) {

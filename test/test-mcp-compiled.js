@@ -15,7 +15,7 @@ async function testCompiledMCP() {
   console.log('🧪 Testing Compiled MCP Server...\n');
   
   const mcpProcess = spawn('node', [
-    'dist/mcp-server-simple.js'
+    '../dist/mcp/mcp-server-simple.js'
   ], {
     cwd: __dirname,
     stdio: ['pipe', 'pipe', 'pipe']

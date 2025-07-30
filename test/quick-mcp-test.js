@@ -5,8 +5,9 @@ import { spawn } from 'child_process';
 async function quickMCPTest() {
   return new Promise((resolve) => {
     const mcpProcess = spawn('node', [
-      'dist/mcp-server-cursor.js'
+      'dist/mcp/mcp-server-cursor.js'
     ], {
+      cwd: process.cwd(),
       stdio: ['pipe', 'pipe', 'pipe']
     });
 

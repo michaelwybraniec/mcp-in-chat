@@ -6,7 +6,7 @@ import { z } from 'zod';
  * Handles maintenance scheduling and retrieval by calling the backend API
  */
 
-const MaintenanceInputSchema = z.object({
+export const MaintenanceInputSchema = z.object({
   customer_id: z.string().describe('The customer ID for maintenance operations'),
   action: z.enum(['get', 'schedule']).describe('Action to perform: get (retrieve schedule) or schedule (book maintenance)'),
   service_date: z.string().optional().describe('Service date for scheduling (YYYY-MM-DD format)'),
@@ -59,7 +59,34 @@ const MaintenanceOutputSchema = z.object({
 export const maintenanceTool = {
   name: 'maintenance',
   description: 'Schedule maintenance services or get maintenance information. Use this when a user wants to schedule boiler maintenance, check maintenance status, or get maintenance recommendations.',
-  inputSchema: MaintenanceInputSchema,
+  inputSchema: {
+    type: 'object',
+    properties: {
+      customer_id: {
+        type: 'string',
+        description: 'The customer ID for maintenance operations'
+      },
+      action: {
+        type: 'string',
+        enum: ['get', 'schedule'],
+        description: 'Action to perform: get (retrieve schedule) or schedule (book maintenance)'
+      },
+      service_date: {
+        type: 'string',
+        description: 'Service date for scheduling (YYYY-MM-DD format)'
+      },
+      service_type: {
+        type: 'string',
+        enum: ['annual', 'emergency', 'repair', 'inspection'],
+        description: 'Type of maintenance service'
+      },
+      issue_description: {
+        type: 'string',
+        description: 'Description of the issue for emergency/repair services'
+      }
+    },
+    required: ['customer_id', 'action']
+  },
   outputSchema: MaintenanceOutputSchema,
   
   async handler(args: z.infer<typeof MaintenanceInputSchema>) {

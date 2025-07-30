@@ -11,7 +11,7 @@ async function testCursorMCP() {
   console.log('🧪 Testing Cursor MCP Server...\n');
   
   const mcpProcess = spawn('node', [
-    'dist/mcp-server-cursor.js'
+    '../dist/mcp/mcp-server-cursor.js'
   ], {
     cwd: __dirname,
     stdio: ['pipe', 'pipe', 'pipe']

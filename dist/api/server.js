@@ -9,7 +9,7 @@ import emailRoutes from './routes/email.js';
 // Load environment variables
 config();
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 // Middleware
 app.use(cors({
     origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000', 'http://localhost:3001'],
@@ -40,20 +40,18 @@ app.use((err, req, res, next) => {
         message: process.env.NODE_ENV === 'development' ? err.message : 'Something went wrong'
     });
 });
-// 404 handler
-app.use('*', (req, res) => {
-    res.status(404).json({
-        success: false,
-        error: 'Endpoint not found',
-        message: `Route ${req.originalUrl} does not exist`
-    });
-});
+// 404 handler - commented out to avoid path-to-regexp issue
+// app.use('*', (req, res) => {
+//   res.status(404).json({
+//     success: false,
+//     error: 'Endpoint not found',
+//     message: `Route ${req.originalUrl} does not exist`
+//   });
+// });
 // Start server
-if (process.env.NODE_ENV !== 'test') {
-    app.listen(PORT, () => {
-        console.log(`🚀 Boiler Maintenance API server running on port ${PORT}`);
-        console.log(`📊 Health check: http://localhost:${PORT}/health`);
-    });
-}
+app.listen(PORT, () => {
+    console.log(`🚀 Boiler Maintenance API server running on port ${PORT}`);
+    console.log(`📊 Health check: http://localhost:${PORT}/health`);
+});
 export default app;
 //# sourceMappingURL=server.js.map

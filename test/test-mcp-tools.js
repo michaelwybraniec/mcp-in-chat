@@ -8,10 +8,13 @@
  */
 
 // Use ts-node loader for TypeScript imports
-import { boilerInfoTool } from '../src/mcp/tools/boiler-info.ts';
-import { maintenanceTool } from '../src/mcp/tools/maintenance.ts';
-import { purchaseTool } from '../src/mcp/tools/purchase.ts';
-import { emailTool } from '../src/mcp/tools/email.ts';
+import { boilerInfoTool, BoilerInfoInputSchema } from '../src/mcp/tools/boiler-info.ts';
+import { maintenanceTool, MaintenanceInputSchema } from '../src/mcp/tools/maintenance.ts';
+import { purchaseTool, PurchaseInputSchema } from '../src/mcp/tools/purchase.ts';
+import { emailTool, EmailInputSchema } from '../src/mcp/tools/email.ts';
+
+// Import Zod for schema validation
+import { z } from 'zod';
 
 const API_BASE_URL = 'http://localhost:3001';
 const API_KEY = 'demo-key';
@@ -23,13 +26,13 @@ const TEST_EMAIL = 'test@example.com';
 /**
  * Test helper function
  */
-async function testTool(toolName, tool, testData, expectedFields = []) {
+async function testTool(toolName, tool, inputSchema, testData, expectedFields = []) {
   console.log(`\n🧪 Testing ${toolName}...`);
   
   try {
     // Validate input schema
     console.log(`  📝 Validating input schema...`);
-    const validatedInput = tool.inputSchema.parse(testData);
+    const validatedInput = inputSchema.parse(testData);
     console.log(`  ✅ Input validation passed`);
     
     // Test the tool handler
@@ -89,6 +92,7 @@ async function runTests() {
   const boilerInfoTest = await testTool(
     'Boiler Info Tool',
     boilerInfoTool,
+    BoilerInfoInputSchema,
     { customer_id: TEST_CUSTOMER_ID },
     ['customer', 'boiler', 'warranty']
   );
@@ -100,6 +104,7 @@ async function runTests() {
   const maintenanceGetTest = await testTool(
     'Maintenance Tool (GET)',
     maintenanceTool,
+    MaintenanceInputSchema,
     { customer_id: TEST_CUSTOMER_ID, action: 'get' },
     ['customer', 'current_status']
   );
@@ -111,6 +116,7 @@ async function runTests() {
   const maintenanceScheduleTest = await testTool(
     'Maintenance Tool (SCHEDULE)',
     maintenanceTool,
+    MaintenanceInputSchema,
     { 
       customer_id: TEST_CUSTOMER_ID, 
       action: 'schedule',
@@ -127,6 +133,7 @@ async function runTests() {
   const purchaseTest = await testTool(
     'Purchase Tool',
     purchaseTool,
+    PurchaseInputSchema,
     {
       customer_id: TEST_CUSTOMER_ID,
       boiler_model: 'Worcester Bosch 8000 Style',
@@ -150,6 +157,7 @@ async function runTests() {
   const emailTest = await testTool(
     'Email Tool',
     emailTool,
+    EmailInputSchema,
     {
       to_email: TEST_EMAIL,
       subject: 'Test Email',

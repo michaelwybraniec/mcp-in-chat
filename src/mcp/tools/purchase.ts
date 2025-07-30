@@ -6,7 +6,7 @@ import { z } from 'zod';
  * Handles boiler purchase orders by calling the backend API
  */
 
-const PurchaseInputSchema = z.object({
+export const PurchaseInputSchema = z.object({
   customer_id: z.string().describe('The customer ID making the purchase'),
   boiler_model: z.string().describe('The boiler model to purchase'),
   payment_info: z.object({
@@ -62,7 +62,64 @@ const PurchaseOutputSchema = z.object({
 export const purchaseTool = {
   name: 'purchase',
   description: 'Process boiler purchase orders with inventory check and technician scheduling. Use this when a user wants to buy a new boiler or upgrade their existing one.',
-  inputSchema: PurchaseInputSchema,
+  inputSchema: {
+    type: 'object',
+    properties: {
+      customer_id: {
+        type: 'string',
+        description: 'The customer ID making the purchase'
+      },
+      boiler_model: {
+        type: 'string',
+        description: 'The boiler model to purchase'
+      },
+      payment_info: {
+        type: 'object',
+        properties: {
+          method: {
+            type: 'string',
+            enum: ['credit_card', 'debit_card', 'bank_transfer'],
+            description: 'Payment method'
+          },
+          card_number: {
+            type: 'string',
+            description: 'Card number (last 4 digits only)'
+          },
+          expiry_date: {
+            type: 'string',
+            description: 'Card expiry date (MM/YY format)'
+          },
+          cvv: {
+            type: 'string',
+            description: 'Card CVV'
+          },
+          billing_address: {
+            type: 'string',
+            description: 'Billing address'
+          },
+          amount: {
+            type: 'number',
+            description: 'Payment amount'
+          }
+        },
+        required: ['method', 'billing_address', 'amount'],
+        description: 'Payment information'
+      },
+      delivery_address: {
+        type: 'string',
+        description: 'Delivery address (if different from billing)'
+      },
+      installation_required: {
+        type: 'boolean',
+        description: 'Whether installation service is required'
+      },
+      preferred_installation_date: {
+        type: 'string',
+        description: 'Preferred installation date (YYYY-MM-DD format)'
+      }
+    },
+    required: ['customer_id', 'boiler_model', 'payment_info']
+  },
   outputSchema: PurchaseOutputSchema,
   
   async handler(args: z.infer<typeof PurchaseInputSchema>) {

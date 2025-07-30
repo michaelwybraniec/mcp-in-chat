@@ -6,7 +6,7 @@ import { z } from 'zod';
  * Sends confirmation emails by calling the backend API
  */
 
-const EmailInputSchema = z.object({
+export const EmailInputSchema = z.object({
   to_email: z.string().email().describe('Recipient email address'),
   subject: z.string().describe('Email subject line'),
   message: z.string().describe('Email message content'),
@@ -31,7 +31,38 @@ const EmailOutputSchema = z.object({
 export const emailTool = {
   name: 'email',
   description: 'Send confirmation emails to customers. Use this when you need to send order confirmations, maintenance reminders, or any other customer communications.',
-  inputSchema: EmailInputSchema,
+  inputSchema: {
+    type: 'object',
+    properties: {
+      to_email: {
+        type: 'string',
+        format: 'email',
+        description: 'Recipient email address'
+      },
+      subject: {
+        type: 'string',
+        description: 'Email subject line'
+      },
+      message: {
+        type: 'string',
+        description: 'Email message content'
+      },
+      email_type: {
+        type: 'string',
+        enum: ['confirmation', 'reminder', 'notification', 'general'],
+        description: 'Type of email being sent'
+      },
+      customer_id: {
+        type: 'string',
+        description: 'Customer ID for tracking purposes'
+      },
+      order_id: {
+        type: 'string',
+        description: 'Order ID for order-related emails'
+      }
+    },
+    required: ['to_email', 'subject', 'message']
+  },
   outputSchema: EmailOutputSchema,
   
   async handler(args: z.infer<typeof EmailInputSchema>) {
