@@ -379,8 +379,8 @@ sequenceDiagram
 - [x] 3.4: Create src/mcp/tools/purchase.ts with MCP tool that calls POST /api/purchase with customer_id, boiler_model, payment_info
 - [x] 3.5: Create src/mcp/tools/email.ts with MCP tool that calls POST /api/send-email with to_email, subject, message
 - [x] 3.6: Register all 4 MCP tools in mcp-server.ts with proper tool descriptions and parameter schemas
-- [ ] 3.7: Create src/mcp/index.ts to export the MCP server for external connections
-- [ ] 3.8: Test MCP server locally by starting it and verifying tools are registered correctly
+- [x] 3.7: Create src/mcp/index.ts to export the MCP server for external connections
+- [x] 3.8: Test MCP server locally by starting it and verifying tools are registered correctly
 - [ ] 3.9: Create test script to verify each MCP tool can be called and returns expected responses
 - [ ] 3.10: Create package.json scripts: "start:api" for backend API, "start:mcp" for MCP server
 
