@@ -115,7 +115,7 @@ router.post('/',
       }
 
       // Check weather suitability
-      const location = customer && customer.address ? this.extractLocationFromAddress(customer.address) : 'Unknown';
+      const location = customer && customer.address ? extractLocationFromAddress(customer.address) : 'Unknown';
       const weatherSuitable = await weatherService.isWeatherSuitableForMaintenance(service_date, location);
 
       if (!weatherSuitable) {
@@ -242,7 +242,7 @@ router.get('/:customer_id/schedule',
       ]);
 
       // Get weather data for next 30 days
-      const location = customer && customer.address ? this.extractLocationFromAddress(customer.address) : 'Unknown';
+      const location = customer && customer.address ? extractLocationFromAddress(customer.address) : 'Unknown';
       const optimalDates = await weatherService.getOptimalMaintenanceDates(location, 30);
       const weatherAlerts = await weatherService.getWeatherAlerts(location);
 
@@ -307,7 +307,7 @@ router.post('/:customer_id/emergency',
       }
 
       // Find emergency technicians
-      const location = customer && customer.address ? this.extractLocationFromAddress(customer.address) : 'Unknown';
+      const location = customer && customer.address ? extractLocationFromAddress(customer.address) : 'Unknown';
       const emergencyTechnicians = await technicianService.getEmergencyTechnicians(location);
 
       if (emergencyTechnicians.length === 0) {

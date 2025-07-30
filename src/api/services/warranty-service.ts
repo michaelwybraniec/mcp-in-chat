@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs';
-import path from 'path';
+import * as path from 'path';
 import { Warranty } from '../../types/index.js';
 
 const WARRANTIES_FILE = path.join(process.cwd(), 'data', 'warranties.json');
@@ -182,7 +182,7 @@ export class WarrantyService {
   async getManufacturers(): Promise<string[]> {
     try {
       const warranties = await this.getAllWarranties();
-      const manufacturers = [...new Set(warranties.map(w => w.manufacturer))];
+      const manufacturers = Array.from(new Set(warranties.map(w => w.manufacturer)));
       return manufacturers.sort();
     } catch (error) {
       console.error('Error getting manufacturers:', error);

@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs';
-import path from 'path';
+import * as path from 'path';
 import { Customer } from '../../types/index.js';
 
 const CUSTOMERS_FILE = path.join(process.cwd(), 'data', 'customers.json');

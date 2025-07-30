@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs';
-import path from 'path';
+import * as path from 'path';
 import { Boiler, Inventory } from '../../types/index.js';
 
 const BOILERS_FILE = path.join(process.cwd(), 'data', 'boilers.json');
