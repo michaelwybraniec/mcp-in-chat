@@ -352,7 +352,7 @@ sequenceDiagram
 - [x] 1.13: Create src/types/index.ts with TypeScript interfaces for Customer, Boiler, Maintenance, Inventory, Order, Weather, Technician, Warranty
 
 ### 2. Backend API Development (90 minutes)
-- [ ] 2.1: Create src/api/server.ts with Express server setup, CORS, JSON middleware
+- [x] 2.1: Create src/api/server.ts with Express server setup, CORS, JSON middleware
 - [ ] 2.2: (MOCK) Create src/api/middleware/auth.ts with mock API key validation (check for "demo-key" header)
 - [ ] 2.3: Create src/api/middleware/validation.ts with input validation using express-validator
 - [ ] 2.4: Create src/api/middleware/rate-limit.ts with rate limiting (100 requests per hour per IP)
