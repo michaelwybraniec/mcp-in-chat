@@ -393,9 +393,9 @@ sequenceDiagram
 - [ ] 4.6: Test MCP server with ChatGPT by providing server connection details and testing each tool
 - [ ] 4.7: Test MCP server with Cursor by providing server connection details and testing each tool
 - [x] 4.8: Create demo/presentation.md with key points to demonstrate MCP Server integration value
-- [ ] 4.9: Create README.md with project overview, setup instructions, and demo guide
+- [x] 4.9: Create README.md with project overview, setup instructions, and demo guide
 - [ ] 4.10: Record demo video showing MCP Server integration with external chatbot
-- [ ] 4.11: Create troubleshooting.md with common issues and solutions
+- [x] 4.11: Create troubleshooting.md with common issues and solutions
 - [ ] 4.12: Final testing: ensure both API and MCP server start correctly and all tools work
 
 ## Unplanned Tasks
