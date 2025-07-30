@@ -292,87 +292,65 @@ flowchart TD
 ### 📅 **Development Timeline**
 
 ```mermaid
-gitgraph
-    commit id: "Project Setup" tag: "Phase 1"
-    commit id: "TypeScript Config"
-    commit id: "Package.json Setup"
+gantt
+    title Development Timeline - Boiler Maintenance MCP Server
+    dateFormat  YYYY-MM-DD
+    section Phase 1: Foundation
+    Project Setup           :done, setup, 2024-07-30, 45m
+    TypeScript Config      :done, tsconfig, 2024-07-30, 15m
+    Package.json Setup     :done, package, 2024-07-30, 15m
     
-    branch backend
-    checkout backend
-    commit id: "Express Server" tag: "Phase 2"
-    commit id: "API Routes"
-    commit id: "Middleware Setup"
-    commit id: "Mock Services"
+    section Phase 2: Backend API
+    Express Server         :done, express, 2024-07-30, 30m
+    API Routes            :done, routes, 2024-07-30, 30m
+    Middleware Setup      :done, middleware, 2024-07-30, 20m
+    Mock Services         :done, services, 2024-07-30, 10m
     
-    checkout main
-    merge backend
-    commit id: "MCP SDK Setup" tag: "Phase 3"
+    section Phase 3: MCP Server
+    MCP SDK Setup         :done, mcp-sdk, 2024-07-30, 15m
+    Tool Definitions      :done, tools, 2024-07-30, 20m
+    Zod Schemas           :done, schemas, 2024-07-30, 10m
     
-    branch mcp-integration
-    checkout mcp-integration
-    commit id: "Tool Definitions"
-    commit id: "Zod Schemas"
-    commit id: "Test Scripts"
+    section Phase 4: Integration
+    Documentation         :done, docs, 2024-07-30, 30m
+    Demo Materials        :done, demo, 2024-07-30, 20m
+    Setup Guides          :done, guides, 2024-07-30, 10m
     
-    checkout main
-    merge mcp-integration
-    commit id: "Documentation" tag: "Phase 4"
-    commit id: "Demo Materials"
-    commit id: "Setup Guides"
-    
-    branch unplanned
-    checkout unplanned
-    commit id: "API Server Fix" type: HIGHLIGHT
-    commit id: "Schema Corrections" type: HIGHLIGHT
-    commit id: "Cursor Integration" type: HIGHLIGHT
-    commit id: "Project Organization" type: HIGHLIGHT
-    
-    checkout main
-    merge unplanned
-    commit id: "Final Documentation" tag: "v1.0.0"
+    section Unplanned Tasks
+    API Server Fix        :done, fix1, 2024-07-30, 20m
+    Schema Corrections    :done, fix2, 2024-07-30, 20m
+    Cursor Integration    :done, fix3, 2024-07-30, 10m
+    Project Organization  :done, org, 2024-07-30, 10m
 ```
 
 ### 🎯 **GitHub Commit History**
 
 ```mermaid
-gitgraph
-    commit id: "Initial Setup"
-    commit id: "TypeScript Config"
-    commit id: "Package.json Setup"
+flowchart TD
+    A[Initial Setup] --> B[TypeScript Config]
+    B --> C[Package.json Setup]
+    C --> D[Express Server]
+    D --> E[API Routes]
+    E --> F[Middleware Setup]
+    F --> G[Mock Services]
+    G --> H[MCP SDK Setup]
+    H --> I[Tool Definitions]
+    I --> J[Zod Schemas]
+    J --> K[Test Scripts]
+    K --> L[Documentation]
+    L --> M[Demo Materials]
+    M --> N[API Server Fix]
+    N --> O[Schema Corrections]
+    O --> P[Cursor Integration]
+    P --> Q[Project Organization]
+    Q --> R[Final Documentation]
+    R --> S[Remove node_modules]
     
-    branch develop
-    checkout develop
-    commit id: "Express Server"
-    commit id: "API Routes"
-    commit id: "Middleware Setup"
-    commit id: "Mock Services"
-    
-    checkout main
-    merge develop
-    commit id: "MCP SDK Setup"
-    
-    branch mcp-tools
-    checkout mcp-tools
-    commit id: "Tool Definitions"
-    commit id: "Zod Schemas"
-    commit id: "Test Scripts"
-    
-    checkout main
-    merge mcp-tools
-    commit id: "Documentation"
-    commit id: "Demo Materials"
-    
-    branch fixes
-    checkout fixes
-    commit id: "API Server Fix" type: HIGHLIGHT
-    commit id: "Schema Corrections" type: HIGHLIGHT
-    commit id: "Cursor Integration" type: HIGHLIGHT
-    
-    checkout main
-    merge fixes
-    commit id: "Project Organization"
-    commit id: "Final Documentation" tag: "v1.0.0"
-    commit id: "Remove node_modules" type: REVERSE
+    style N fill:#ffeb3b
+    style O fill:#ffeb3b
+    style P fill:#ffeb3b
+    style Q fill:#ffeb3b
+    style S fill:#ffcdd2
 ```
 
 ### 🛡️ **Security & Validation**
