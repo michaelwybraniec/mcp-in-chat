@@ -373,7 +373,7 @@ sequenceDiagram
 - [x] 2.19: Create src/api/index.ts to export the Express app for testing
 
 ### 3. MCP Server Development (45 minutes)
-- [ ] 3.1: Create src/mcp/mcp-server.ts with MCP server setup using @modelcontextprotocol/sdk
+- [x] 3.1: Create src/mcp/mcp-server.ts with MCP server setup using @modelcontextprotocol/sdk
 - [ ] 3.2: Create src/mcp/tools/boiler-info.ts with MCP tool that calls GET /api/boiler-info with customer_id parameter
 - [ ] 3.3: Create src/mcp/tools/maintenance.ts with MCP tool that calls GET/POST /api/maintenance with customer_id and service_date
 - [ ] 3.4: Create src/mcp/tools/purchase.ts with MCP tool that calls POST /api/purchase with customer_id, boiler_model, payment_info
