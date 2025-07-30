@@ -386,7 +386,7 @@ sequenceDiagram
 
 ### 4. External Integration & Demo (60 minutes)
 - [x] 4.1: Create docs/setup.md with step-by-step instructions to run the demo
-- [ ] 4.2: Create docs/api-endpoints.md with all 4 API endpoints documentation (URL, method, parameters, response)
+- [x] 4.2: Create docs/api-endpoints.md with all 4 API endpoints documentation (URL, method, parameters, response)
 - [ ] 4.3: Create docs/mcp-tools.md with all 4 MCP tools documentation (name, description, parameters, examples)
 - [ ] 4.4: Create demo/conversation-flows.md with sample chatbot conversations using each MCP tool
 - [ ] 4.5: Test MCP server with Claude by providing server connection details and testing each tool
